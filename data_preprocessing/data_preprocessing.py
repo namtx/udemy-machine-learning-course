@@ -35,3 +35,8 @@ X = onehotencoder.fit_transform(X).toarray()
 labelencoder_y = LabelEncoder()
 y = labelencoder_y.fit_transform(y)
 # array([0, 1, 0, 0, 1, 1, 0, 1, 0, 1])
+
+# Splitting the dataset into the Training set and Tests set
+
+from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
